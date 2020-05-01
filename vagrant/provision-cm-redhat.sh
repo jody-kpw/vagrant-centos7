@@ -12,13 +12,15 @@ sudo yum install -y rh-python36
 scl enable rh-python36 bash
 
 # Installing Development Tools
-sudo yum groupinstall 'Development Tools'
+sudo yum -y groupinstall 'Development Tools'
 
 # Install python-pip and any required packages
 sudo yum -y install python-pip
 
-# Install GIT
-sudo yum install -y git
+# Install Ansible
+sudo yum install -y epel-release
+sudo yum -y repolist
+sudo yum install -y ansible
 
 # Install Ansible
 sudo yum install -y ansible
